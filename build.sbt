@@ -8,6 +8,7 @@ libraryDependencies ++= Seq(
   "org.springframework" % "spring-webmvc" % "4.0.6.RELEASE",
   "org.springframework" % "spring-context" % "4.0.6.RELEASE",
   "org.springframework" % "spring-context-support" % "4.0.6.RELEASE",
+  "org.apache.tiles" % "tiles-jsp" % "3.0.4",
   "javax.servlet" % "javax.servlet-api" % "3.0.1" % "provided",
   "javax.servlet" % "jstl" % "1.2" % "compile",
   "org.slf4j" % "jcl-over-slf4j" % "1.7.5" ,
@@ -18,8 +19,9 @@ libraryDependencies ++= Seq(
         ExclusionRule(organization = "com.sun.jmx"),
         ExclusionRule(organization = "javax.jms")
       ),
-  "org.eclipse.jetty" % "jetty-webapp" % "9.1.0.v20131115" % "container, compile",
-  "org.eclipse.jetty" % "jetty-jsp" % "9.1.0.v20131115" % "container"
+  "org.apache.tomcat.embed"% "tomcat-embed-core"% "7.0.40"% "container",
+  "org.apache.tomcat.embed"% "tomcat-embed-logging-juli"% "7.0.40"% "container",
+  "org.apache.tomcat.embed"% "tomcat-embed-jasper"% "7.0.40"% "container"
 )
 
-jetty(port = 9090)
+tomcat(port = 9090)

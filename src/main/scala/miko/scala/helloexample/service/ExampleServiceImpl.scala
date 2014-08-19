@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service
  * @author kopeckymiroslav
  */
 
-@Service
+@Service("exampleService")
 class ExampleServiceImpl extends ExampleService{
   override def serviceName: String = "ExampleServiceName"
 }
