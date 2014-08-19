@@ -2,7 +2,7 @@ name := "miko-spring-scala"
 
 version := "1.0"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.11.2"
 
 libraryDependencies ++= Seq(
   "org.springframework" % "spring-webmvc" % "4.0.6.RELEASE",

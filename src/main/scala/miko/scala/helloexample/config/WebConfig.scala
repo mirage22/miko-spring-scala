@@ -6,14 +6,12 @@ import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.{FilterType, Configuration, Bean, ComponentScan}
 import org.springframework.context.support.ReloadableResourceBundleMessageSource
-import org.springframework.context.annotation.ComponentScan.Filter
 import org.springframework.http.MediaType
 import org.springframework.stereotype.{Service, Controller}
 import org.springframework.web.servlet.{LocaleResolver, ViewResolver}
 import org.springframework.web.servlet.config.annotation._
 import org.springframework.web.servlet.i18n.{CookieLocaleResolver, LocaleChangeInterceptor}
 import org.springframework.web.servlet.view.tiles3.{TilesConfigurer, TilesViewResolver}
-import org.springframework.web.servlet.view.{InternalResourceViewResolver, JstlView}
 
 
 /**
@@ -70,7 +68,7 @@ class WebConfig extends WebMvcConfigurerAdapter{
   }
 
   @Bean(name = Array("localeResolver"))
-  def getLocaleResolver(): LocaleResolver = {
+  def getLocaleResolver: LocaleResolver = {
     val cookieLocaleResolver: CookieLocaleResolver = new CookieLocaleResolver()
     cookieLocaleResolver.setDefaultLocale(new Locale("en"))
     cookieLocaleResolver
