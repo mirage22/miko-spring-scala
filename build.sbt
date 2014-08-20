@@ -19,9 +19,9 @@ libraryDependencies ++= Seq(
         ExclusionRule(organization = "com.sun.jmx"),
         ExclusionRule(organization = "javax.jms")
       ),
-  "org.apache.tomcat.embed"% "tomcat-embed-core"% "7.0.40"% "container",
-  "org.apache.tomcat.embed"% "tomcat-embed-logging-juli"% "7.0.40"% "container",
-  "org.apache.tomcat.embed"% "tomcat-embed-jasper"% "7.0.40"% "container"
+  "org.apache.tomcat.embed" % "tomcat-embed-core" % "7.0.55" % "container",
+  "org.apache.tomcat.embed" % "tomcat-embed-logging-juli" % "7.0.55" % "container",
+  "org.apache.tomcat.embed" % "tomcat-embed-jasper" % "7.0.55" % "container"
 )
 
 tomcat(port = 9090)
